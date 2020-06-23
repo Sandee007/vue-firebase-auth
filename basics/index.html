@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Basics</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .one{
+            color: green;
+        }
+        .two{
+            text-decoration: line-through;
+        }
+        .canvas{
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vue Basics</h1>
+    <div id="app">
+        <h2> {{ title }} </h2>
+        <p> {{ greet('morning') }} </p>
+        <a :href="url" >YouTube</a>
+        <div v-bind:class="classes"></div>
+        <input type="text" :value="name">
+        <h3>v-bind: <=> :</h3>
+        <p>I earn {{wage}} pounds per hours </p>
+        <button v-on:click="wage++" >Increase wage by 1 [not a func]</button>
+        <button v-on:click="wage--" >Increase wage by 1 [not a func]</button>
+        <button v-on:dblclick="changeWage(10)">Increase wage [func] </button>
+        <button v-on:dblclick="changeWage(-10)">Decrease wage [func] </button>
+<br>
+        <button @click="logEvent" >Log Event Info</button>
+        <div class="canvas" @mousemove="logCoords" > {{coords.x}} , {{coords.y}} </div>
+        <input type="text" @keyup="updateName">
+        <input type="text" v-model="name">
+        <h4 v-if="visibility" >Visible only if true</h4>
+        <button @click="toggleVisibility" > Toggle Visibility {{visibility}} </button>
+
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
