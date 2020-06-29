@@ -9,7 +9,9 @@ new Vue({
         coords: {
             x: 0 , y:0
         },
-        visibility: true
+        visibility: true,
+        price: 0,
+        qty: 0
     },
     methods: {
         greet(time){
@@ -30,6 +32,17 @@ new Vue({
         },
         toggleVisibility(e){
             this.visibility = !this.visibility;
+        },
+        addTen(){
+            this.qty+= 10*100;
+
         }
-    }
+    },
+    // watch: {
+    //     price : (qty)=>{
+    //         let vm = qty;
+    //         return vm;
+
+    //     } 
+    // }
 })

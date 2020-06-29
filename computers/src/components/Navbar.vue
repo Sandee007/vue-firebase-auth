@@ -1,12 +1,12 @@
 <template>
   <div class="navbar">
-    <nav class="nav-extended indigo darken-2">
+    <nav class="nav-extended  blue-grey darken-4">
       <div class="nav-content">
-        <router-link to="">
+        <router-link :to=" {name:'Index'} ">
           <span class="nav-title"> Computers  </span>
         </router-link>
-        <a href="" class="btn-floating btn-large halfway-fab pink">
-          <router-link to="">
+        <a href="" class="btn-floating btn-large halfway-fab">
+          <router-link :to=" {name:'AddComputer'} ">
             <i class="material-icons">add</i>
           </router-link>
         </a>
@@ -28,6 +28,7 @@ export default {
 
 <style>
 .navbar nav{
+  width: 100%;
   padding: 0 20px; /* top/bottom - left/right */
 }
 </style>

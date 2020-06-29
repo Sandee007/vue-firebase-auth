@@ -42,10 +42,23 @@
         <h4 v-if="visibility" >Visible only if true</h4>
         <button @click="toggleVisibility" > Toggle Visibility {{visibility}} </button>
 
+        <button @click="addTen"> Add 10 </button>
+        <button id="b2" > Add 2 </button>
+        <input type="text" name="qty" id="qty" v-model="price" > {{qty}}
 
+        <h1> {{price}}  </h1>
     </div>
+    <!-- <button id="b2" > Add 2 </button>
+    <input type="text" name="qty" id="qty" v-model="price" > -->
+    <script>
+        const b2 = document.querySelector('#b2');
+        const qty = document.querySelector('#qty');
 
-
+        b2.addEventListener("click" , (e) =>{
+            qty.value = 'dfdf';
+            console.log(e)
+        })
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
